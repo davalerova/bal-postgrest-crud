@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:8090
+@empleadoId = 3
+
+### Listar empleados
+GET {{baseUrl}}/empleados
+
+### Obtener empleado por id
+GET {{baseUrl}}/empleados/{{empleadoId}}
+
+### Crear empleado
+POST {{baseUrl}}/empleados
+Content-Type: application/json
+
+{
+  "nombre": "Ana García",
+  "cargo": "Desarrolladora",
+  "salario": 4500.00
+}
+
+### Actualizar empleado
+PUT {{baseUrl}}/empleados/{{empleadoId}}
+Content-Type: application/json
+
+{
+  "nombre": "Ana García",
+  "cargo": "Tech Lead",
+  "salario": 5200.00
+}
+
+### Eliminar empleado
+DELETE {{baseUrl}}/empleados/{{empleadoId}}
